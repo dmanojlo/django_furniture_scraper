@@ -1,0 +1,57 @@
+{% extends 'furniture/base.html' %}
+
+{% block content %}
+<h1>Furniture scraper</h1>
+<button type="button" class="button-white fade" name="button">Scrape furniture</button>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+
+var statusInterval;
+// var taskId = '{{task}}';
+// console.log(taskId)
+
+$(document).ready(function() {
+
+$(document).on('click', 'button', function(){
+
+    $.ajax({
+        url: '/fur/home/',
+        type: 'POST',
+        success:  crawlSuccess,
+        //error: crawlFail,
+    });
+
+
+
+
+  function checkCrawlStatus(task){
+        $.ajax({
+            url: '/fur/home/?task_id='+taskId+'/',
+            type: 'GET',
+            success: function(data){
+              if(data.status === 'finished'){
+                console.log('works works')
+                clearInterval(statusInterval)
+            }
+            }
+            //error: console.log('no'),
+        })
+    }
+
+function crawlSuccess(task){
+    taskId = task.task
+    //uniqueId = data.unique_id;
+    statusInterval = setInterval(function() {checkCrawlStatus(taskId);}, 4000);
+}
+
+});
+});
+// function crawlFail(data){
+//     $('#progress').html(data.responseJSON.error);
+//     $('#progress').attr("class", "alert alert-danger");
+// }
+
+</script>
+{% endblock %}

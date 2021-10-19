@@ -1,8 +1,6 @@
 {% extends 'furniture/base.html' %}
 
-
-  <body>
-
+{% block content %}
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -17,7 +15,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Furniture <em>Scraper</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,155 +47,39 @@
         <div class="row">
           <div class="col-md-12">
             <div class="text-content">
-              <h4>about us</h4>
-              <h2>our company</h2>
+              <h4>about</h4>
+              <h2>find furniture at discount</h2>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
     <div class="team-members">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div id="scraped-items" class="col-md-12">
+              <button type="button" name="button">Scrape furniture</button>
             <div class="section-heading">
               <h2>Our Team Members</h2>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="team-member">
               <div class="thumb-container">
-                <img src="assets/images/team_01.jpg" alt="">
+                <img src="https://hnhr-cdn2.elasticbox.eu/media/catalog/product/cache/c5b0e6136a6dd7f7d91d8b889ed40f35/b/l/blagovaonski-stol-fonetic-160-200-179547-147911-popup_2.jpg" alt="">
                 <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               <div class="down-content">
-                <h4>Johnny William</h4>
+                <h4 class="item-name">Johnny William</h4>
                 <span>CO-Founder</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_02.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>Karry Pitcher</h4>
-                <span>Product Expert</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_03.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>Michael Soft</h4>
-                <span>Chief Marketing</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_04.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>Mary Cool</h4>
-                <span>Product Specialist</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_05.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>George Walker</h4>
-                <span>Product Photographer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_06.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>Kate Town</h4>
-                <span>General Manager</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -217,21 +99,79 @@
       </div>
     </footer>
 
+{% endblock %}
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% block javascript %}
+<script type="text/javascript">
+
+var statusInterval;
+// var taskId = '{{task}}';
+// console.log(taskId)
+
+$(document).ready(function() {
+
+$(document).on('click', 'button', function(){
+
+    $.ajax({
+        url: '/fur/home/',
+        type: 'POST',
+        success:  crawlSuccess,
+        //error: crawlFail,
+    });
 
 
-    <!-- Additional Scripts -->
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/isotope.js"></script>
-    <script src="assets/js/accordions.js"></script>
 
 
+  function checkCrawlStatus(task){
+        $.ajax({
+            url: '/fur/home/?task_id='+taskId+'/',
+            type: 'GET',
+            success: function(data){
+              if(data.status === 'finished'){
+                clearInterval(statusInterval)
+                console.log('works works')
+                var list = data.jsi;
+                var html = '';
+                for(var i=0; i<list.length; i++){
+                  html += `
 
-  </body>
+                              <div class="col-md-4">
+                                <div class="team-member">
+                                  <div class="thumb-container">
+                                    <img src="https://hnhr-cdn2.elasticbox.eu/media/catalog/product/cache/c5b0e6136a6dd7f7d91d8b889ed40f35/b/l/blagovaonski-stol-fonetic-160-200-179547-147911-popup_2.jpg" alt="">
+                                    <div class="hover-effect">
+                                    </div>
+                                  </div>
+                                  <div class="down-content">
+                                    <h4 class="item-name">`+ list[i].item_name +`</h4>
+                                    <span>`+ list[i].old_price +`</span>
+                                    <p>`+ list[i].discount_price +`</p>
+                                  </div>
+                                </div>
+                              </div>
+                      `;
+    }
 
-</html>
+                $(html).insertAfter($( "#scraped-items" ));
+
+            }
+            }
+            //error: console.log('no'),
+        })
+    }
+
+function crawlSuccess(task){
+    taskId = task.task
+    //uniqueId = data.unique_id;
+    statusInterval = setInterval(function() {checkCrawlStatus(taskId);}, 4000);
+}
+
+});
+});
+// function crawlFail(data){
+//     $('#progress').html(data.responseJSON.error);
+//     $('#progress').attr("class", "alert alert-danger");
+// }
+
+</script>
+{% endblock %}

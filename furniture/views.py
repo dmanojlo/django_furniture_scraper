@@ -43,7 +43,7 @@ def home(request):
             #print(data)
             return JsonResponse(data)
     #print('task na dnu',task)
-    return render(request, 'furniture/home.html', {})
+    return render(request, 'furniture/about.html', {})
 
 # def home(request):
 #     return render(request, 'furniture/home.html', {})

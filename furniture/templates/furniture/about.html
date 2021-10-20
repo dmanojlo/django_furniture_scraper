@@ -48,7 +48,7 @@
           <div class="col-md-12">
             <div class="text-content">
               <h4>about</h4>
-              <h2>find furniture at discount</h2>
+              <h2>furniture discount finder</h2>
             </div>
           </div>
         </div>
@@ -58,10 +58,10 @@
     <div class="team-members">
       <div class="container">
         <div class="row">
-          <div id="scraped-items" class="col-md-12">
-              <button type="button" name="button">Scrape furniture</button>
-            <div class="section-heading">
-              <h2>Our Team Members</h2>
+          <div id="scraped-items" style="text-align: center;"class="col-md-12">
+              <button type="button" class="filled-button" name="button">Scrape Mima furniture</button>
+            <div style="text-align: center;" class="section-heading">
+              <h2>Mima</h2>
             </div>
           </div>
 
@@ -112,6 +112,8 @@ $(document).ready(function() {
 
 $(document).on('click', 'button', function(){
 
+    $('.section-heading').html('<h2 class="fir fadeIn">Scraping, wait to finish...</h2>');
+
     $.ajax({
         url: '/fur/home/',
         type: 'POST',
@@ -129,6 +131,7 @@ $(document).on('click', 'button', function(){
             success: function(data){
               if(data.status === 'finished'){
                 clearInterval(statusInterval)
+                $('.section-heading').html('<h2>Mima results</h2>');
                 console.log('works works')
                 var list = data.jsi;
                 var html = '';
@@ -138,14 +141,14 @@ $(document).on('click', 'button', function(){
                               <div class="col-md-4">
                                 <div class="team-member">
                                   <div class="thumb-container">
-                                    <img src="https://hnhr-cdn2.elasticbox.eu/media/catalog/product/cache/c5b0e6136a6dd7f7d91d8b889ed40f35/b/l/blagovaonski-stol-fonetic-160-200-179547-147911-popup_2.jpg" alt="">
+                                    <img src="`+list[i].img_link+`" alt="">
                                     <div class="hover-effect">
                                     </div>
                                   </div>
                                   <div class="down-content">
                                     <h4 class="item-name">`+ list[i].item_name +`</h4>
-                                    <span>`+ list[i].old_price +`</span>
-                                    <p>`+ list[i].discount_price +`</p>
+                                    <span>`+ list[i].discount_price +`</span>
+                                    <p><s>`+ list[i].old_price +`</s></p>
                                   </div>
                                 </div>
                               </div>

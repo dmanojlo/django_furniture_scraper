@@ -14,7 +14,7 @@ body {
 }
 p {
 	margin-bottom: 0px;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 300;
 	color: #4a4a4a;
 	line-height: 24px;
@@ -58,19 +58,23 @@ ul.social-icons li a:hover {
 	color: #fff;
 }
 
-a.filled-button {
+.filled-button {
+  cursor: pointer;
 	background-color: #f33f3f;
 	color: #fff;
-	font-size: 14px;
+	font-size: 16px;
 	text-transform: capitalize;
 	font-weight: 300;
 	padding: 10px 20px;
 	border-radius: 5px;
 	display: inline-block;
 	transition: all 0.3s;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
 }
 
-a.filled-button:hover {
+.filled-button:hover {
 	background-color: #121212;
 	color: #fff;
 }
@@ -291,7 +295,7 @@ header .navbar {
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
-	background-color: #fff;	
+	background-color: #fff;
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
@@ -731,10 +735,9 @@ footer .inner-content p a {
 
 .team-member .down-content span {
 	display: block;
-	font-size: 13px;
+	font-size: 16px;
 	color: #f33f3f;
 	font-weight: 500;
-	margin-bottom: 20px;
 }
 
 

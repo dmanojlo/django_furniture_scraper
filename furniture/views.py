@@ -13,7 +13,7 @@ scrapyd = ScrapydAPI('http://localhost:6800')
 
 @csrf_exempt
 @require_http_methods(['POST', 'GET'])  # only get and post
-def home(request):
+def mima(request):
     data = dict()
     # settings = {
     #         'FEED_URI': 'result.json',
@@ -43,7 +43,7 @@ def home(request):
             #print(data)
             return JsonResponse(data)
     #print('task na dnu',task)
-    return render(request, 'furniture/about.html', {})
+    return render(request, 'furniture/mima.html', {})
 
 # def home(request):
 #     return render(request, 'furniture/home.html', {})

@@ -59,9 +59,9 @@
       <div class="container">
         <div class="row">
           <div id="scraped-items" style="text-align: center;"class="col-md-12">
-              <button type="button" class="filled-button" name="button">Scrape Mima furniture</button>
+              <button type="button" class="filled-button" name="button">Scrape Emezzeta furniture</button>
             <div style="text-align: center;" class="section-heading">
-              <h2>Mima</h2>
+              <h2>Emezzeta</h2>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ $(document).on('click', 'button', function(){
     $('.section-heading').html('<h2 class="fir fadeIn">Scraping, wait to finish...</h2>');
 
     $.ajax({
-        url: '/fur/home/',
+        url: '/fur/emezzeta/',
         type: 'POST',
         success:  crawlSuccess,
         //error: crawlFail,
@@ -126,12 +126,13 @@ $(document).on('click', 'button', function(){
 
   function checkCrawlStatus(task){
         $.ajax({
-            url: '/fur/home/?task_id='+taskId+'/',
+            url: '/fur/emezzeta/?task_id='+taskId+'/',
             type: 'GET',
             success: function(data){
               if(data.status === 'finished'){
                 clearInterval(statusInterval)
-                $('.section-heading').html('<h2>Mima results</h2>');
+                $('.section-heading').empty();
+                $('.section-heading').html('<h2>emezzeta results</h2>');
                 console.log('works works')
                 var list = data.jsi;
                 var html = '';
@@ -154,7 +155,7 @@ $(document).on('click', 'button', function(){
                               </div>
                       `;
     }
-
+                $(".col-md-4" ).remove();
                 $(html).insertAfter($( "#scraped-items" ));
 
             }

@@ -59,9 +59,9 @@
       <div class="container">
         <div class="row">
           <div id="scraped-items" style="text-align: center;"class="col-md-12">
-              <button type="button" class="filled-button" name="button">Scrape Emezzeta furniture</button>
+              <button type="button" class="filled-button" name="button">Scrape Lesnina furniture</button>
             <div style="text-align: center;" class="section-heading">
-              <h2>Emezzeta</h2>
+              <h2>Lesnina</h2>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ $(document).on('click', 'button', function(){
     $('.section-heading').html('<h2 class="fir fadeIn">Scraping, wait to finish...</h2>');
 
     $.ajax({
-        url: '/fur/emezzeta/',
+        url: '/fur/lesnina/',
         type: 'POST',
         success:  crawlSuccess,
         //error: crawlFail,
@@ -126,17 +126,18 @@ $(document).on('click', 'button', function(){
 
   function checkCrawlStatus(task){
         $.ajax({
-            url: '/fur/emezzeta/?task_id='+taskId+'/',
+            url: '/fur/lesnina/?task_id='+taskId+'/',
             type: 'GET',
             success: function(data){
               if(data.status === 'finished'){
                 clearInterval(statusInterval)
                 $('.section-heading').empty();
-                $('.section-heading').html('<h2>Emezzeta results</h2>');
+                $('.section-heading').html('<h2>Lesnina results</h2>');
                 console.log('works works')
                 var list = data.jsi;
                 var html = '';
                 for(var i=0; i<list.length; i++){
+                  if(list[i].old_price){
                   html += `
 
                               <div class="col-md-4">
@@ -156,6 +157,29 @@ $(document).on('click', 'button', function(){
                                 </div>
                               </div>
                       `;
+                      }
+                    else{
+                      html += `
+
+                                  <div class="col-md-4">
+                                    <div class="team-member">
+                                        <a href="`+list[i].page_link+`">
+                                      <div class="thumb-container">
+                                        <img src="`+list[i].img_link+`" alt="">
+                                        <div class="hover-effect">
+                                        </div>
+                                      </div>
+                                      <div class="down-content">
+                                        <h4 class="item-name">`+ list[i].item_name +`</h4>
+                                        <span>`+ list[i].low_price +`</span>
+                                        <p>Niska cijena</p>
+                                      </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                          `;
+                    }
+
     }
                 $(".col-md-4" ).remove();
                 $(html).insertAfter($( "#scraped-items" ));

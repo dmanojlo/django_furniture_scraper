@@ -690,6 +690,7 @@ footer .inner-content p a {
 .team-member .down-content {
 	padding: 30px;
 	text-align: center;
+
 }
 
 .team-member .thumb-container {
@@ -731,6 +732,9 @@ footer .inner-content p a {
 	font-size: 17px;
 	color: #1a6692;
 	margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .team-member .down-content span {

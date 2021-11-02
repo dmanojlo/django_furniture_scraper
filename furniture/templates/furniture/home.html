@@ -1,57 +1,41 @@
 {% extends 'furniture/base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Furniture scraper</h1>
-<button type="button" class="button-white fade" name="button">Scrape furniture</button>
-{% endblock %}
+<div class="best-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>About Furniture Scraper</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="left-content">
+          <h4>Django and Scrapy project</h4>
+          <p>This project is about integrating <a href="https://www.djangoproject.com/">Django</a> and <a href="https://scrapy.org/">Scrapy</a> to scrape preferred websites. This article named <a href="https://alioguzhan.medium.com/how-to-use-scrapy-with-django-application-c16fabd0e62e">How to use Scrapy with Django Application</a> on Medium has helped me a lot to integrate these two frameworks. </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="right-image">
+          <img src="{% static 'assets/images/django_scrapy.png' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-{% block javascript %}
-<script type="text/javascript">
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inner-content">
+          <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
 
-var statusInterval;
-// var taskId = '{{task}}';
-// console.log(taskId)
-
-$(document).ready(function() {
-
-$(document).on('click', 'button', function(){
-
-    $.ajax({
-        url: '/fur/home/',
-        type: 'POST',
-        success:  crawlSuccess,
-        //error: crawlFail,
-    });
-
-
-
-
-  function checkCrawlStatus(task){
-        $.ajax({
-            url: '/fur/home/?task_id='+taskId+'/',
-            type: 'GET',
-            success: function(data){
-              if(data.status === 'finished'){
-                console.log('works works')
-                clearInterval(statusInterval)
-            }
-            }
-            //error: console.log('no'),
-        })
-    }
-
-function crawlSuccess(task){
-    taskId = task.task
-    //uniqueId = data.unique_id;
-    statusInterval = setInterval(function() {checkCrawlStatus(taskId);}, 4000);
-}
-
-});
-});
-// function crawlFail(data){
-//     $('#progress').html(data.responseJSON.error);
-//     $('#progress').attr("class", "alert alert-danger");
-// }
-
-</script>
+        - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 {% endblock %}

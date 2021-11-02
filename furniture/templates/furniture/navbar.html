@@ -1,0 +1,52 @@
+{% load static %}
+
+<!-- Header -->
+<header class="">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h2>Furniture <em>Scraper</em></h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          {% with url_name=request.resolver_match.url_name %}
+          <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:home' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item {% if url_name == 'emezzeta' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:emezzeta' %}">Emezzeta</a>
+          </li>
+          <li class="nav-item {% if url_name == 'mima' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:mima' %}">Mima</a>
+          </li>
+          <li class="nav-item {% if url_name == 'prima' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:prima' %}">Prima</a>
+          </li>
+          <li class="nav-item {% if url_name == 'harvey' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:harvey' %}">Harvey Norman</a>
+          </li>
+          <li class="nav-item {% if url_name == 'lesnina' %}active{% endif %}">
+            <a class="nav-link" href="{% url 'furniture:lesnina' %}">Lesnina</a>
+          </li>
+          {% endwith %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Page Content -->
+<div class="page-heading about-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <h2>furniture discount finder</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

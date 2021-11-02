@@ -97,7 +97,7 @@ ul.social-icons li a:hover {
 }
 
 .about-heading {
-	background-image: url(../images/about-heading.jpg);
+	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/about-room.jpg);
 }
 
 .contact-heading {

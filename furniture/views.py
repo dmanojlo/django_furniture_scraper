@@ -34,8 +34,8 @@ def mima(request):
         status = scrapyd.job_status('default', task_id)
         #print(status)
         if status == 'finished':
-            with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\mima_result.json", encoding='utf-8') as f:
-            #with urllib.request.urlopen("https://randmovie-scraper.herokuapp.com/logs/result.json") as f:
+            #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\mima_result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/mima-result.json", encoding='utf-8') as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso
@@ -68,8 +68,8 @@ def emezzeta(request):
         status = scrapyd.job_status('default', task_id)
         #print(status)
         if status == 'finished':
-            with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\emezz_result.json", encoding='utf-8') as f:
-            #with urllib.request.urlopen("https://randmovie-scraper.herokuapp.com/logs/result.json") as f:
+            #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\emezz_result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/emezz-result.json", encoding='utf-8') as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso
@@ -103,8 +103,8 @@ def lesnina(request):
         status = scrapyd.job_status('default', task_id)
         #print(status)
         if status == 'finished':
-            with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\lesnina_result.json", encoding='utf-8') as f:
-            #with urllib.request.urlopen("https://randmovie-scraper.herokuapp.com/logs/result.json") as f:
+            #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\lesnina_result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/lesnina-result.json", encoding='utf-8') as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso
@@ -137,8 +137,8 @@ def prima(request):
         status = scrapyd.job_status('default', task_id)
         #print(status)
         if status == 'finished':
-            with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\prima_result.json", encoding='utf-8') as f:
-            #with urllib.request.urlopen("https://randmovie-scraper.herokuapp.com/logs/result.json") as f:
+            #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\prima_result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/prima-result.json", encoding='utf-8') as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso
@@ -171,8 +171,8 @@ def harvey(request):
         status = scrapyd.job_status('default', task_id)
         #print(status)
         if status == 'finished':
-            with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\harvey_result.json", encoding='utf-8') as f:
-            #with urllib.request.urlopen("https://randmovie-scraper.herokuapp.com/logs/result.json") as f:
+            #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\harvey_result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/harvey-result.json", encoding='utf-8') as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso

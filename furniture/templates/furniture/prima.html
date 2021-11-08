@@ -56,7 +56,7 @@ $(document).on('click', 'button', function(){
     $('.section-heading').html('<h2 class="fir fadeIn">Scraping, wait to finish...</h2>');
 
     $.ajax({
-        url: '/fur/prima/',
+        url: '/prima/',
         type: 'POST',
         success:  crawlSuccess,
         //error: crawlFail,
@@ -67,7 +67,7 @@ $(document).on('click', 'button', function(){
 
   function checkCrawlStatus(task){
         $.ajax({
-            url: '/fur/prima/?task_id='+taskId+'/',
+            url: '/prima/?task_id='+taskId+'/',
             type: 'GET',
             success: function(data){
               if(data.status === 'finished'){

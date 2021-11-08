@@ -58,7 +58,7 @@ $(document).on('click', 'button', function(){
     $('.section-heading').html('<h2 class="fir fadeIn">Scraping, wait to finish...</h2>');
 
     $.ajax({
-        url: '',
+        url: '/emezzeta/',
         type: 'POST',
         success:  crawlSuccess,
         //error: crawlFail,
@@ -69,11 +69,10 @@ $(document).on('click', 'button', function(){
 
   function checkCrawlStatus(task){
         $.ajax({
-            url: '/?task_id='+taskId+'/',
+            url: '/emezzeta/?task_id='+taskId+'/',
             type: 'GET',
             success: function(data){
               if(data.status === 'finished'){
-                clearInterval(statusInterval)
                 $('.section-heading').empty();
                 $('.section-heading').html('<h2>Emezzeta results</h2>');
                 console.log('works works')
@@ -102,6 +101,7 @@ $(document).on('click', 'button', function(){
     }
                 $(".col-md-4" ).remove();
                 $(html).insertAfter($( "#scraped-items" ));
+                clearInterval(statusInterval)
 
             }
             }

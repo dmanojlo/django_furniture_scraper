@@ -35,9 +35,9 @@ def mima(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\mima_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/mima-result.json") as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/mima_result.json", encoding='utf-8') as f:
                 jso = json.load(f)
-            print('ovo je id')
+            #print('ovo je id')
             data['jsi'] = jso
             data['status'] = status
             #print(data)
@@ -69,9 +69,9 @@ def emezzeta(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\emezz_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/emezz-result.json") as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/emezz_result.json", encoding='utf-8') as f:
                 jso = json.load(f)
-            print('ovo je id')
+            #print('ovo je id')
             data['jsi'] = jso
             data['status'] = status
             #print(data)
@@ -104,9 +104,9 @@ def lesnina(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\lesnina_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/lesnina-result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/lesnina_result.json", encoding='utf-8') as f:
                 jso = json.load(f)
-            print('ovo je id')
+            #print('ovo je id')
             data['jsi'] = jso
             data['status'] = status
             #print(data)
@@ -138,9 +138,9 @@ def prima(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\prima_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/prima-result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/prima_result.json", encoding='utf-8') as f:
                 jso = json.load(f)
-            print('ovo je id')
+            #print('ovo je id')
             data['jsi'] = jso
             data['status'] = status
             #print(data)
@@ -172,9 +172,9 @@ def harvey(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\harvey_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/harvey-result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/harvey_result.json", encoding='utf-8') as f:
                 jso = json.load(f)
-            print('ovo je id')
+            #print('ovo je id')
             data['jsi'] = jso
             data['status'] = status
             #print(data)

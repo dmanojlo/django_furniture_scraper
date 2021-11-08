@@ -35,7 +35,7 @@ def mima(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\mima_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/mima-result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/mima-result.json") as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso
@@ -69,7 +69,7 @@ def emezzeta(request):
         #print(status)
         if status == 'finished':
             #with open(r"C:\Users\dmanojlovic\Documents\furniture_scraper\furniture_scraper\emezz_result.json", encoding='utf-8') as f:
-            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/emezz-result.json", encoding='utf-8') as f:
+            with urllib.request.urlopen("https://furniture-scrapyd.herokuapp.com/logs/emezz-result.json") as f:
                 jso = json.load(f)
             print('ovo je id')
             data['jsi'] = jso

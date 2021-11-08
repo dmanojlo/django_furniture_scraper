@@ -6,7 +6,7 @@ from .views import mima, emezzeta, lesnina, prima, harvey, home
 app_name = 'furniture' # za url putanju do appa
 
 urlpatterns = [
-     path('home/', home, name='home'),
+     path('', home, name='home'),
      path('mima/', mima, name='mima'),
      path('emezzeta/', emezzeta, name='emezzeta'),
      path('lesnina/', lesnina, name='lesnina'),
